@@ -17,8 +17,6 @@ function Footer({ spotify }) {
 
     useEffect(() => {
         spotify.getMyCurrentPlaybackState().then((res) => {
-            console.log("RESPONSE >> ", res);
-
             dispatch({
                 type: ACTION.SET_PLAYING,
                 playing: res.is_playing,

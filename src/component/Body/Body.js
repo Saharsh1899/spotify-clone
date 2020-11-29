@@ -14,9 +14,7 @@ function Body( {spotify} ) {
     const playPlaylist = (id) => {
         spotify
             .play({
-                context_uri: `spotify:playlist:2kV2g7uCTlYvASTkQGHx1l`,
-                offset: { position: 5 },
-                position_ms: 0
+                context_uri: `spotify:playlist:${id}`,
             })
             .then((response) => {
                 spotify.getMyCurrentPlaybackState().then((res) => {
@@ -71,7 +69,7 @@ function Body( {spotify} ) {
                 <div className="body__icons">
                     <PlayCircleFilledIcon
                         className="body__shuffle"
-                        onClick={playPlaylist}
+                        onClick={() => playPlaylist(discover_weekly.id)}
                     />
                     <FavoriteIcon fontSize="large" />
                     <MoreHorizIcon />

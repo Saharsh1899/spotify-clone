@@ -62,8 +62,8 @@ function App() {
     }
   }, [token, dispatch]);
 
-  console.log("PERSON >> ", user);
-  console.log("TOKEN >> ", token);
+  // console.log("PERSON >> ", user);
+  // console.log("TOKEN >> ", token);
 
   return (
     <div className="app">

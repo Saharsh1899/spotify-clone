@@ -7,6 +7,7 @@ export const initialState ={
     spotify: null,
     discover_weekly: null,
     top_artists: null,
+    search: ''
 };
 
 export const ACTION ={
@@ -17,7 +18,8 @@ export const ACTION ={
     SET_ITEM: "set-item",
     SET_DISCOVER_WEEKLY: "set-discover-weekly",
     SET_TOP_ARTIST: "set-top-artist",
-    SET_SPOTIFY: "set-spotify"
+    SET_SPOTIFY: "set-spotify",
+    SEARCH: "search"
 }
 
 const reducer = (state, action) => {
@@ -63,6 +65,11 @@ const reducer = (state, action) => {
             return{
                 ...state,
                 top_artists: action.top_artists
+            };
+        case ACTION.SEARCH:
+            return{
+                ...state,
+                search: action.search
             };
         default:
             return state;

@@ -21,6 +21,7 @@
 
 .header__left > input {
   border: none;
+  height: 20px;
   width: 100%;
 }
 
