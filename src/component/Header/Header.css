@@ -25,6 +25,14 @@
   width: 100%;
 }
 
+.header__searchInput:focus {
+  outline: none;
+}
+
+.header__left .MuiIconButton-root{
+  cursor: pointer;
+}
+
 .header__right > h4 {
   margin-left: 10px;
 }

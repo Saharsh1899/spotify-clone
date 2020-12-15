@@ -25,7 +25,8 @@ function Header({ history }) {
                 <SearchIcon onClick={() => history.push(`/search/${inputSearch}`)} />
                 <input
                     onChange={(e) => setInputSearch(e.target.value)}
-                    placeholder="Search for Artists, Songs, or Podcasts "
+                    className="header__searchInput"
+                    placeholder="Search for Songs"
                     type="text"
                 />
             </div>
